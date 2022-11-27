@@ -156,6 +156,14 @@ function temperature (fahr) {
     }
 }
 
+//მესამე ვარიანტი
+function ConvertToCelsius(f) {
+    if(typeof(f) != Number) {
+        return false;
+    }
+    return f*5/(9*32);
+}
+
 
 //დავალება 3
 // დაწერეთ ფუნქცია, რომელიც პარამეტრად მიიღებს a (პირველი რიცხვი), 
@@ -190,5 +198,25 @@ function myFunction (a, b, operation) {
         return a / b
     } else {
         return "false"
+    }
+}
+
+//მესამე ვარიანტი
+
+function ReturnNew(a,b,operation) {
+    if(typeof(a) != Number || typeof(b) != Number || operation != '+' || operation != '-' || operation != '/' || operation != '*') {
+        return false;
+    }
+    if(operation == '+') {
+        return a+b;
+    } 
+    if(operation == '-') {
+        return a-b;
+    } 
+    if(operation == '/') {
+        return a/b;
+    } 
+    if (operation == '*') {
+        return a*b;
     }
 }
