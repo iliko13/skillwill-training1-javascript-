@@ -240,7 +240,7 @@
 //როგორ აღვწეროთ თუ რამდენი სიტყვა დაწერა და რამდენი დარჩა ტვიტის წერისას
 // var tweet = prompt("Compose your Tweet");
 // var tweetCount = tweet.length; //ეს მონაკვეთი რომც მოაშორო კოდი მაინც იმუშავებს, რადგან არაა საჭირო, უბრალოდ თვალსაჩინოებისთვის.
-// alert("შენ დაწერე " + tweetCount + " და დაგრჩა " + (140 - tweetCount) + " სიტყვა")
+// alert("შენ დაწერე " + tweetCount(აქ შეგვიძლია 242 სტროფის მოშორებისას პირდაპირ tweet.length დავწეროთ) + " და დაგრჩა " + (140 - tweetCount) + " სიტყვა")
 
 //ამ მეთოდით ჩვენ წინასწარ ვუსაზღვრავთ თუ რამდენ სიტყვის რაოდენბოაში გამოჩნდება მისი ჩანაწერი, დანარჩენს კი უბრალოდ წაშლის.
 // var tweet = prompt ("Compose your Tweet");
@@ -444,22 +444,22 @@
 
 //fibonacci solution
 //fibonaci numbers [ 0,1,1,2,3,5,8,13...]
-function fibonacciGenerator (n) {
-    var output = [];
-    if (n === 1) {
-        output = [0];
-    } else if (n === 2) {
-        output = [0, 1];
-    } else {
-        output = [0, 1];
-        for ( var i = 2; i < n; i++) {
-            output.push(output[output.length -2] + output[output.length - 1]);
-        }
-    }
-    return output;
-}
-output = fibonacciGenerator(3);
-console.log(output);
+// function fibonacciGenerator (n) {
+//     var output = [];
+//     if (n === 1) {
+//         output = [0];
+//     } else if (n === 2) {
+//         output = [0, 1];
+//     } else {
+//         output = [0, 1];
+//         for ( var i = 2; i < n; i++) {
+//             output.push(output[output.length -2] + output[output.length - 1]);
+//         }
+//     }
+//     return output;
+// }
+// output = fibonacciGenerator(3);
+// console.log(output);
 
 
 
@@ -484,7 +484,23 @@ console.log(output);
 // }
 
 
+//DOM (udemy)
 
+var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+var randomImage1 = "images/dice" + randomNumber1 + ".png";
+document.querySelectorAll("img")[0].setAttribute("src", randomImage1);
+
+var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+var randomImage2 = "image/dice" + randomNumber2 + ".png";
+document.querySelectorAll("img")[1].setAttribute("src", randomImage2);
+
+if(randomNumber1 > randomNumber2) {
+    document.querySelector("h1").innerHTMl = "1 Wins";
+} else if(randomNumber1 < randomNumber2) {
+    document.querySelector("h1").innerHTML = "2 Wins"
+} else {
+    document.querySelector("h1").innerHTML = "Draw";
+}
 
 
 
